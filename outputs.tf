@@ -18,6 +18,10 @@ output "name" {
   value = aws_eks_cluster.cluster.name
 }
 
+output "oidc_tls_issuer" {
+  value = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
+}
+
 output "version" {
   value = aws_eks_cluster.cluster.version
 }
